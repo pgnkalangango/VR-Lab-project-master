@@ -1,0 +1,47 @@
+{% extends "base.html" %} 
+{% block title %}Scheduler{% endblock %}
+{% block content %}
+
+<header>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/pages.css') }}">
+</header>
+
+<h1 align="center">Welcome to VR Scheduler</h1>
+<br/>
+
+<h5>Enter Date and Time to Schedule Appointment</h5>
+
+<form method="POST">
+  <div class="form-group">
+    <label for="startdatetime">Some name or data or whatever</label>
+    <input
+      type="text"
+      class="form-control"
+      id="user name"
+      name="userName"
+    />
+  </div>
+  <div class="form-group">
+    <label for="startdatetime">Start Date and Time</label>
+    <input
+      type="datetime-local"
+      class="form-control"
+      id="startdatetime"
+      name="startdatetime"
+    />
+  </div>
+  <div class="form-group">
+      <label for="enddatetime">End Date and Time</label>
+      <input
+        type="datetime-local"
+        class="form-control"
+        id="enddatetime"
+        name="enddatetime"
+    />
+  </div>
+  <br/>
+  <button type="submit" class="btn btn-warning">Schedule an Appointment</button>
+  <a class="btn btn-warning" href="/">Go Back</a>
+</form>
+
+{% endblock %}
